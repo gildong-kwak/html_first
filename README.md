@@ -87,3 +87,7 @@
   <link rel="icon" href="파비콘.ico 경로" type="image/x-icon">
 1. 파비콘 크기로 이미지 다운받거나 편집하기
 2. html에서 head 안에 link태그로 `favicon` href주소 연결하기
+## 이미지태그 `img`
+* 대체텍스트 alt 속성을 필수로 작성해야 합니다.
+* 이미지 사용 시 의미전달이 필요한 이미지와 아닌 이미지를 구분해서 사용해야 합니다.
+* <img src=”url” alt=””>
