@@ -91,3 +91,19 @@
 * 대체텍스트 alt 속성을 필수로 작성해야 합니다.
 * 이미지 사용 시 의미전달이 필요한 이미지와 아닌 이미지를 구분해서 사용해야 합니다.
 * <img src=”url” alt=””>
+## 이미지태그 `img` (inline)
+* <img src=”url” alt=””>
+## figure, figcaption 태그
+* 문서 안 사진을 감싸는 틀로서 활용하고 사진의 캡션을 정의할 수 있습니다.
+* <a href>태그를 <figure>태그 바로 위 또는 바로 아래에 사용 가능하다.
+## video 태그
+* 주소 뒤에 물음표로 시작해 원하는 태그 사용하기 ex) ?autoplay=1&mute=1&loop=1 (여기서 mute는 muted로 표기하지 않는다.)
+* autoplay : 동영상 자동재생 / muted : 소리끄기(음소거) / loop : 계속 재생(반복) / controls :  동영상 재생 바 / 1: trye 0 : falus
+* 동영상 다운 받아 사용시 이름 간략하게 영문 및 숫자 표기로 정정하여 사용한다.
+## class, id 많이 사용하는 키워드
+* wrapper, wrap, area 전체 묶는 영영
+* contents, container 중~소 묶는 영역
+* group, g 간단한 소그룹 영역
+* top, btm(bottom), left, right 레이아웃 방향을 의미하는 키워드
+* 예 : 의미있는단어_영역명
+* 예시 : product_wrapm, item_area, price_g, main_contents, top_btn
