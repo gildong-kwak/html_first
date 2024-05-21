@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | spotify</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/form2.css">
+</head>
+<body>
+    <main>
+        <h1><a href="#"><img src="./images/Logo.svg" alt="spotify"></a></h1>
+        <div class="tab_tilte">
+            <a href="#" class="active"><span>SIGN IN</span></a>
+            <a href="#">SIGN UP</a>
+        </div>
+        <form action="#" method="post" id="sign_in_frm">
+            <fieldset class="in_group">
+                <legend class="skip">로그인양식</legend>
+                <div class="in">
+                    <input type="text" name="user_name" placeholder="Username">
+                    <input type="password" name="user_pwd" placeholder="Password">
+                </div>
+                <p class="stay">
+                    <input type="checkbox" name="stay_sign_in" value="stay_sign_in_y" id="stay_sign_in_y">
+                    <label for="stay_sign_in_y">stay signed in</label>
+                </p>
+                <p class="btn">
+                    <button type="submit" id="sign_in_btn">SIGN IN</button>
+                </p>
+            </fieldset>
+        </form>
+        <a href="#" class="forget_pw">Forget Password ?</a>
+    </main>
+</body>
+</html>

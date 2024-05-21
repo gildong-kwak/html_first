@@ -1,0 +1,78 @@
+main {
+    width:1024px;/* 높이는 길어질수있으므로 쓰지않는다. */
+    /* background-color:#f5f5f5; 배경은 하얀색으로 따로 주지 않는다. */
+    font-family:"Noto Sans KR", sans-serif;
+    background-color:lightgray;
+    margin:0 auto;
+}
+main > * /* <-메인의 모든 자식들을 뜻함 */{
+    width:500px;
+    background-color:yellow;
+    margin:84px auto 0;
+    /* margin-left:auto;
+    margin-right:auto; */
+}
+main h1 {
+    font-size:4.375rem;
+    font-weight:700;
+    letter-spacing:-0.2px;
+    margin-bottom:25px
+}
+main p {
+    font-size:1.25rem;
+    letter-spacing:-0.2px;
+    margin-bottom:57px
+}
+main #login_frm {
+    background-color:aqua;
+}
+main #login_frm fieldset {}
+main #login_frm fieldset dl {}
+main #login_frm fieldset dl dt,
+main #login_frm fieldset h2 {
+    font-size:1.875rem;
+    font-weight:700;
+    letter-spacing:-0.2px;
+    margin-bottom:18px;
+}
+main #login_frm fieldset dl dd {
+    margin-bottom:38px;
+}
+main #login_frm fieldset dl dd input[name^=user] {
+    width:100%;/* 메인500px 부모의 크기가 변경되면 따라 바뀔수있게 %로 적용해준다. */
+    line-height:53px;
+    padding-left:15px;
+    border:1px solid #aaa;
+    border-radius:10px;
+    color:#aaa; /* input 입력 글자 색상 */
+}
+main #login_frm fieldset dl dd input[name^=user]::/* 선택대상을 잡을때 */placeholder {
+    color:red;
+}
+main #login_frm fieldset h2 {}
+main #login_frm fieldset .btn_g {}
+main #login_frm fieldset .btn_g button {
+    width:100%;
+    line-height:53px;
+    font-weight:700;
+    letter-spacing:-0.2px;
+    border-radius:10px;
+    border:1px solid #aaa;
+}
+main #login_frm fieldset .btn_g #join_btn {
+    background-color:#222;
+    color:#fff;
+    margin-bottom:18px;
+
+}
+main #login_frm fieldset .btn_g #google_join_btn {
+    background-color:#fff;
+    color:#222;
+}
+main .join_link {
+    text-align:center;
+    letter-spacing:-0.2px;
+}
+main .join_link a {
+    font-weight:700;
+}

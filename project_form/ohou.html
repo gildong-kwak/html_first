@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohouse | join</title>
+    <!-- 웹 글꼴 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/ohou.css">
+</head>
+<body>
+    <main>
+        <!-- section -->
+        <section>
+            <h1>회원가입</h1>
+            <P>SNS계정으로 간편하게 회원가입</P>
+            <div class="join">
+                <a href="#"><img src="./images/fb_icon.jpeg.svg" alt="facebook join"></a>
+                <a href="#"><img src="./images/kakao_icon.jpeg.svg" alt="kakako join"></a>
+                <a href="#"><img src="./images/naver_icon.png.svg" alt="naver join"></a>
+            </div>
+        </section>
+        <hr>
+        <!-- form -->
+        <form action="#" method="post" id="ohouse">
+            <fieldset class="ohou">
+                <legend class="skip">회원가입양식</legend>
+                <!-- dl -->
+                <dl>
+                    <dt>이메일</dt>
+                    <dd>
+                        <input type="email" name="user_id" placeholder="이메일" required>
+                        <p>@</p>
+                        <select name="agency">
+                            <option value="선택해주세요">선택해주세요</option>
+                            <option value="naver">naver.com</option>
+                            <option value="hanmail">hanmail.net</option>
+                            <option value="daum">daum.net</option>
+                            <option value="gamil">gamil.com</option>
+                            <option value="nate">nate.com</option>
+                            <option value="hotmail">hotmail.com</option>
+                            <option value="outlook">outlook.com</option>
+                            <option value="icloud">icloud.com</option>
+                            <option value="직접입력">직접입력</option>
+                        </select>
+                    </dd>
+                    <dd><button type="button" id="mail_btn">이메일 인증하기</button></dd>
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <span>영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</span>
+                        <input type="password" name="user_pw" placeholder="비밀번호" required>
+                    </dd>
+                    <dd></dd>
+                    <dt>비밀번호 확인</dt>
+                    <dd><input type="password" name="user_pw_check" placeholder="비밀번호 확인" required></dd>
+                    <dd></dd>
+                    <dt>닉네임</dt>
+                    <dd>
+                        <span>다른 유저와 겹치지 않도록 입력해주세요. (2~20자)</span>
+                        <input type="text" name="user_nic" placeholder="별명 (2~20자)" required>
+                    </dd>
+                    <dd></dd>
+                </dl>
+                <!-- ul -->
+                <ul>
+                    <li><h2>약관동의</h2></li>
+                    <li>
+                        <input type="checkbox" name="all_agree" value="agree" id="agree">
+                        <label for="agree"><span class="right_all">전체동의</span>선택항목에 대한 동의 포함</label>
+                    </li>
+                    <li><span></span></li>
+                    <li>
+                        <input type="checkbox" name="age" value="age_agree" id="age_agree">
+                        <label for="age_agree">만 14세 이상입니다<span>(필수)</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="use" value="use_agree" id="use_agree">
+                        <label for="use_agree">이용약관<span>(필수)</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="p_info" value="info_agree" id="info_agree">
+                        <label for="info_agree">개인정보수집 및 이용동의<span>(필수)</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="marketing" value="m_agree" id="m_agree">
+                        <label for="m_agree">개인정보 마케팅 활용 동의<span>(선택)</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="event" value="alarm" id="alarm">
+                        <label for="alarm">이벤트, 쿠폰, 특가 알림 메일 및 SMS 등 수신<span>(선택)</span></label>
+                    </li>
+                </ul>
+                <!-- div -->
+                <div class="result">
+                    <button type="submit" id="join_btn">회원가입하기</button>
+                    <p>이미 아이디가 있으신가요?<a href="#">로그인</a></p>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

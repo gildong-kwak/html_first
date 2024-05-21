@@ -1,0 +1,170 @@
+html {scrollbar-width: 10px;;scrollbar-color:#d9d9d9 #fff;}
+/* Opera */
+html::-o-scrollbar {width: 10px;}/*스크롤바 크기*/
+html::-o-scrollbar-thumb {background-color:#d9d9d9;border-radius: 5px;}/*스크롤 드래그바*/
+html::-o-scrollbar-thumb:hover {background-color: #fff;}
+/* ::webkit- 크롬, 사파리, 엣지 브라우저 동작용(브자우저 엔진) */
+::-webkit-scrollbar {width: 10px;}/*스크롤바 크기*/
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}/*스크롤바 배경*/
+::-webkit-scrollbar-thumb {background-color:#d9d9d9;border-radius: 5px;}/*스크롤 드래그바*/
+::-webkit-scrollbar-thumb:hover {background-color: #fff;}
+main {
+    width:1024px;
+    margin:0 auto;
+    font-family:"Noto Sans KR", sans-serif;
+    background-color:#f5f5f5;
+}
+main h1 {}
+main h1 a {}
+main h1 a img {
+    width:120px; height:61px;
+    margin:41px 452px;
+}
+/* 회원가입약관 */
+main .law {
+    background-color:#fff;
+    width:612px; height:200px;
+    margin:0 206px 54px;
+    border-radius:10px;
+    overflow-y:scroll;
+    overflow-x:auto;
+}
+main .law h2,h3,p {
+    margin:10px 20px 0 10px;
+    font-size:0.75rem;
+    line-height:1.6;
+    letter-spacing:-0.2%;
+}
+main .law h2 {}
+main .law h3 {}
+main .law p {}
+/* 회원가입양식 */
+main #join_frm {
+    width:612px;
+    margin:0 auto; /* 상하가 없다는 뜻 */
+    /* background-color:lime; */
+}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {}
+main #join_frm .user_info dl dt {
+    width:156px;
+    float:left;
+    /* background-color:pink; */
+    font-size:1rem;
+    margin:9px 0;
+}/* 제목 공통 */
+main #join_frm .user_info dl dt span {
+    color:#ff0000;
+}
+/* 필수표시 */
+main #join_frm .user_info dl dd {
+    width:300px; height:40px;
+    float:left;
+    /* background-color:skyblue; */
+}/* 내용 공통 */
+main #join_frm .user_info dl dd:nth-child(3n) {
+    width:156px;
+    float:right;
+    text-align:right;
+    /* background-color:coral; */
+}/* 내용(버튼위치, 빈)공통 */
+/* 아이디,비밀번호,확인,이름,이메일,휴대폰 입력 input 공통 선택자 =user */
+main #join_frm .user_info dl dd input[name^=user] {
+    /* background-color:yellow; */
+    width:100%; height:40px;
+    border:1px solid #aaa;
+    border-radius:5px;
+    font-size:0.875rem;
+    color:#aaa;
+}
+/* 중복확인(아이디,이메일), 인증번호 받기 공통 선택자 =btn */
+main #join_frm .user_info dl dd button[id$=btn] {
+    background-color:#9E00B7;
+    width:120px; height:40px;
+    border-radius:5px;
+    border:0;
+    color:#fff;
+    font-size:0.875rem;
+}
+/* 휴대폰 */
+main #join_frm .user_info dl dd select[name=agency] {
+    appearance:none; /* select의 기본 화살표 숨기기 */
+    background-image:url(../images/arrow_drop_down.svg);
+    background-repeat:no-repeat;
+    background-position:29px 14px;
+    /* 
+    background-position:x축값 y축값; (왼쪽상단 기준)
+    background-position:10px 20px;
+    background-position:right bottom;
+     */
+    width:50px; height:40px;
+    border-radius:5px;
+    font-size:0.75rem;
+    text-align:center;
+}
+main #join_frm .user_info dl dd select[name=agency] option {}
+main #join_frm .user_info dl dd input[name=user_num] {
+    width:245px;
+}
+main #join_frm .user_info dl dd #phone_btn {
+    background-color:#aaa;
+} /* 인증번호 받기(색상) */
+/* 주소 */
+main #join_frm .user_info dl dt:nth-child() {}
+main #join_frm .user_info dl dd #btn_address_search {
+    width:300px; height:43px;
+    background-color:#fff;
+    color:#000;
+    font-size:1rem;
+    border:1px solid #9E00B7;
+    border-radius:5px;
+}
+main #join_frm .user_info dl dd #btn_address_search + span {}
+/* 성별 */
+main #join_frm .user_info dl dd input[name=gender] {display:none;} /* 공통 */
+main #join_frm .user_info dl dd input[name=gender]:checked+label /* 선택공통 */ {
+    /* background-color:blue; */
+    background-image:url(../images/gender_checked.svg);
+}
+/* main #join_frm .user_info dl dd input[name=gender] + label {} */
+main #join_frm .user_info dl dd label[for*=gen] /* 공통 */ {
+    /* background-color:purple; */
+    background-image:url(../images/gender_unchecked.svg);
+    background-repeat:no-repeat;
+    padding-left:37px;
+    display:inline-block;
+}
+/* 생년원일 */
+main #join_frm .user_info dl dd input[name^=birthday] {
+    border:none;
+}
+main #join_frm .user_info dl dd input[name^=birthday] + span {}
+/* 생년월일 dd만 별도 선택자 추가 */
+main #join_frm .user_info dl dt:last-of-type + dd {
+    background-color:red;
+    border:1px solid #9E00B7;
+}
+/* Chrome, Safari, Edge, Opera */
+main #join_frm .user_info dl dd input[type=number]::-webkit-outer-spin-button,
+main #join_frm .user_info dl dd input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+main #join_frm .user_info dl dd input[type=number] {
+    -moz-appearance: textfield;
+}
+/* 최종 버튼 */
+main #join_frm .user_info .join_btn {
+    text-align:center;
+}
+main #join_frm .user_info .join_btn #sign_btn {
+    width:100%;
+    border-radius:10px;
+    background-color:#9E00B7;
+    color:#fff;
+    font-size:0.875rem;
+    width:200px; height:40px;
+    margin:54px auto;
+    border:0px;
+}

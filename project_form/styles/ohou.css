@@ -1,0 +1,42 @@
+html,body {background-color:pink;}
+/* 회원가입 */
+main {
+    width:360px;
+    background-color:#fff;
+    margin:50px auto;
+}
+/* section */
+main section {}
+main section h1 {}
+main section p {}
+main section .join {}
+main section .join a {}
+main section .join a img {}
+main hr {}
+/* form */
+main #ohouse {}
+main #ohouse .ohou {}
+/* dl */
+main #ohouse .ohou dl {}
+main #ohouse .ohou dl dt {}
+main #ohouse .ohou dl dd {}
+main #ohouse .ohou dl dd input {}
+main #ohouse .ohou dl dd p {}
+main #ohouse .ohou dl dd select {}
+main #ohouse .ohou dl dd select option {}
+main #ohouse .ohou dl dd button {}
+main #ohouse .ohou dl dd span {}
+/* ul */
+main #ohouse .ohou ul {}
+main #ohouse .ohou ul li {}
+main #ohouse .ohou ul li h2 {}
+main #ohouse .ohou ul li input {}
+main #ohouse .ohou ul li label {}
+main #ohouse .ohou ul li label .right_all {}
+main #ohouse .ohou ul li label span {}
+main #ohouse .ohou ul li span {}
+/* div */
+main #ohouse .ohou .result {}
+main #ohouse .ohou .result #join_btn {}
+main #ohouse .ohou .result p {}
+main #ohouse .ohou .result p a {}
