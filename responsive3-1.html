@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 상품 구현 반응형웹 | min 연습</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        @media screen and (min-width:320px) {
+            #app {
+                min-width: 320px;
+                max-width: 1000px;
+                background-color: blue;
+                width: 100%;
+                margin: 0 auto;
+            }
+        #app .product {
+                background-color: skyblue;
+                padding: 0 16px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+        #app .product .item {
+                background-color: grey;
+                margin: 0 0 20px;
+                width: calc((100% / 2) - 10px);
+                height: 120px;
+            }
+        }
+        @media screen and (min-width:480px) {
+            #app .product .item {width: calc((100% / 3) - 10px);}
+        }
+        @media screen and (min-width:760px) {
+            #app .product .item {width: calc((100% / 4) - 10px);}
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="product">
+            <a href="#" class="item">1</a>
+            <a href="#" class="item">2</a>
+            <a href="#" class="item">3</a>
+            <a href="#" class="item">4</a>
+            <a href="#" class="item">5</a>
+            <a href="#" class="item">6</a>
+            <a href="#" class="item">7</a>
+            <a href="#" class="item">8</a>
+            <a href="#" class="item">9</a>
+            <a href="#" class="item">10</a>
+            <a href="#" class="item">11</a>
+            <a href="#" class="item">12</a>
+        </div>
+    </div>
+</body>
+</html>

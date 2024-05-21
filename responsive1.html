@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹 적응형웹 | CSS</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* 
+        header, main, footer 모두 block, 부모의 너비만큼 100% 인식상태
+        */
+        .bg {
+            background-color: lime;
+            height: 100px;
+            width: 100%; /* px, vw, % 사용가능 */
+            max-width: 1600px; /* px 권장 */
+            min-width: 320px; /* px 권장 */
+        }
+        #wrap {
+            border: 5px solid red;
+            width: 50vw; /* 최대 최소 크기에서만 인식한다(min~max 크기 범위값안에서만 width 속성 인식) */
+            /* max-width: 500px; */ /* 최대크기제한 */
+            /* min-width: 400px; */ /* 최소크기제한 */
+        }
+        #wrap header {
+            background-color: aqua;
+            height: 100px;
+        }
+        #wrap main {
+            background-color: yellow;
+            height: 200vh;
+        }
+        #wrap footer {
+            background-color: lime;
+            height: 200px;
+        }
+        /* media quree 반응형웹 규칙설정 */
+        /* @media 상세규칙설정 {규칙성립 시 실행되는 CSS} */
+        /* @media screen and (max-width:700px) {선택자{속성:값;}} */
+        /* 선택자 {속성:값; 속성:값;} */
+        /* @media screen and (max-width:700px) {
+            #wrap header {background-color: pink;}
+            #wrap main {background-color: skyblue;}
+        } */
+        /* 501~700 */
+        /* @media screen and (max-width:500px) {
+            #wrap header {background-color: purple;}
+            #wrap main {background-color: blue;}
+        } */
+        /* 0~500 */
+        @media screen and (max-width:1600px) {
+            body {background-color: yellow;}
+        }
+        @media screen and (max-width:1200px) {
+            body {background-color: pink;}
+        }
+        @media screen and (max-width:960px) {
+            body {background-color: coral;}
+        }
+        @media screen and (max-width:760px) {
+            body {background-color: lime;}
+        }
+        @media screen and (max-width:480px) {
+            body {background-color: gray;}
+        }
+    </style>
+</head>
+<body>
+    <!-- VS code emmet기능(기본내장기능) -->
+    <!-- 꺽쇠 없이 태그명 작성 후 Tab 자동완성 -->
+    <!-- 특정 태그에 필수속성이 있을때 속성이 함께 출력 -->
+    <!-- 자동으로 안나오는 속성은 태그:속성 Tab 출력 -->
+    <!-- 태그.클래스명 | 태그#아이디명 Tab 출력 -->
+    <!-- 태그>자식태그*자식갯수 -->
+    <!-- 이전형제+다음형제 -->
+    <!-- dl#test>dt+dd*2 -->
+    <!-- =====네이버 로그인===== -->
+    <!-- <div id="app">
+        <div class="top"><a href="#" class="prev"><img src="#" alt="이전으로"></a></div>
+        <h1><a href="#"><img src="#" alt="네이버"></a></h1>
+        <div class="keyboard"><a href="#"><span>pc키보드보기</span><img src="#" alt=""></a></div>
+        <form action="#" method="post" id="login_frm">
+            <fieldset>
+                <legend class="skip">로그인양식</legend>
+                <ul>
+                    <li><input type="text" name="id" placeholder="아이디"></li>
+                    <li><input type="password" name="pw" placeholder="비밀번호"></li>
+                </ul>
+                <div class="btn"><button type="button" id="login_btn">로그인</button></div>
+            </fieldset>
+        </form>
+        <div class="search">
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div> -->
+    <div class="bg"></div>
+    <div id="wrap">
+        <header>header</header>
+        <main>main</main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

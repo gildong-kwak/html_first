@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 상품 구현 반응형웹</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* mobile 320px 설계시작 */
+        @media screen and (min-width:320px) {
+            #app {
+                background-color: skyblue;
+                /* min, max 최소 최대 너비기준값은 수정작업의 간편화를 위해서 선언 가장 첫번째 위치에 몰아서 작성한다. */
+                min-width: 320px;
+                max-width: 1000px;
+                width: 100%; /* 반응형웹이므로 너비값100% */
+                /* height: 568px; */ /* overflow: hidden; */ /* 피그마처럼 가려진 부분을 위해 값을 줌(높이값을 주지않으므로 높이와 히든은 주석처리) */
+                margin: 0 auto;
+            }
+            #app .product {
+                background-color: pink;
+                display: flex;
+                flex-flow: row wrap; /* 옆으로 나열, 줄바꿈 */
+                justify-content: space-between; /* 자동 균등배치 */
+                padding: 0 16px; /* 좌/우 여백 */
+            }
+            #app .product .item {
+                background-color: lightgrey;
+                width: calc((100% / 2) - 10px); /* ->모바일 */
+                /* width: 139px; */
+                height: 120px;
+                margin: 0 0 20px;
+                /* font */
+                font-size: 2.5rem;
+                text-align: center;
+            }
+        } /* min:320 */
+        @media screen and (min-width:480px) {
+            /* @media 조건 2개 이상 작성 시 -> 먼저 선언된 속성:값 기준 변경되는 값만 작성한다. */
+            #app .product {background-color: hotpink;}
+            #app .product .item {width: calc((100% / 3) - 10px);}
+        } /* min:480 */
+        @media screen and (min-width:760px) {
+            #app .product .item {width: calc((100% / 4) - 10px);}
+        } /* min:760 */
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="product">
+            <a href="#" class="item">1</a>
+            <a href="#" class="item">2</a>
+            <a href="#" class="item">3</a>
+            <a href="#" class="item">4</a>
+            <a href="#" class="item">5</a>
+            <a href="#" class="item">6</a>
+            <a href="#" class="item">7</a>
+            <a href="#" class="item">8</a>
+            <a href="#" class="item">9</a>
+            <a href="#" class="item">10</a>
+            <a href="#" class="item">11</a>
+            <a href="#" class="item">12</a>
+        </div>
+    </div>
+</body>
+</html>

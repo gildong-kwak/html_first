@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position2 | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        main {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            margin: 30px auto 0;
+            /* 1. a~d 자식박스를 absolute로 움직일때 기준이 되는 부모 설정 */
+            position: relative;
+        }
+        main .box {
+            width: 100px;
+            height: 100px;
+            position: absolute; /* 2. 얘만하면 뒤로 전부 정렬 */
+        }
+        /* absolute 이용해서 요소 배치시 중첨위치가 생기면 태그 작성 순서에 따라 기본 배치가 결정된다. */
+        /* z-index 수동으로 설정하는 중첩순서 속성, 단위사용안함, 0~999 */
+        /* 사이트 접속 시 함께 실행되는 기간성 이벤트 및 주요 공지사항은 z-index가 999으로 최대값으로 사용된다. */
+        /* z-index속성은 position의 추가속성이기 때문에 position속성 없이 사용할 수 없다. */
+        main .a {
+            background-color: aqua;
+            left: 0; top: 0; /* 기본값 */
+            z-index: 500;
+        }
+        main .b {
+            background-color: lime;
+            left: 50px; top: 50px;
+            z-index: 300;
+        }
+        main .c {
+            background-color: yellow;
+            left: 100px; top: 100px;
+            z-index: 400;
+        }
+        main .d {
+            background-color: pink;
+            left: 150px; top: 150px;
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box a">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+    </main>
+</body>
+</html>
