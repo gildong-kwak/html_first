@@ -1,0 +1,35 @@
+main {
+    width:809px;
+    padding:488px 108px;
+    margin:0 auto;
+    text-align:center;
+    background-color:#f5f5f5;
+    font-family:"Noto Sans KR", sans-serif;
+}
+main .list {
+    width:100%;
+
+}
+main .list thead {
+    background-color:#FF0066;
+    color:#FFFFFF;
+}
+main .list thead tr {
+    border-radius:30px;
+}
+main .list thead .p_red {}
+main .list thead tr th {
+    font-size:1.563erm;
+    font-weight:400;
+    text-align:center;
+    padding:20px 0;
+    border:1px solid;
+}
+main .list tbody {}
+main .list tbody tr {}
+main .list tbody tr td {
+    font-size:1.125rem;
+    font-weight:bolder;
+    padding:20px 0;
+    border:1px solid;
+}
