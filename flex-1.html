@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex | 0426</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .container {
+            background-color:purple;
+            /* padding:20px; */ /* 배경의 여백 값 */
+            width:500px;
+            height:500px;
+            /* flex 공부(부모-정렬대상의 부모) */
+            display:flex;
+            /* display:inline-flex; */ /* 많이 사용안함 */
+            /* flex-direction:부모속성, 아이템정렬방향(메인축) */
+            /* flex-direction:row-reverse; */ /* float:right;를 준 모습과 똑같다(역순) */
+            /* flex-direction:column; */ /* inline을 수직으로 적용하고 싶을때 */
+            /* flex-direction:column-reverse; */ /* 많이 사용안함 */
+            /* flex-wrap:wrap; */ /* wrap, nowrap 상황에 따라 사용 */
+            /* flex-wrap:wrap-reverse; */
+            /* flex-flow:row wrap; */
+            flex-flow:row wrap;
+            /* justify-content:flex-end; */ /* float:right;를 준 모습과 똑같다(정순) */
+            /* justify-content:center; */ /* flex-flow의 첫 번째 방향 값에 따라 바뀐다. (column기준으로 justify-content(=방법)센터) */
+            /* justify-content:space-around; */ /* 끝 여백을 띄고싶을때 */
+            /* justify-content:space-between; */ /* 끝 여백을 붙이고싶을때 */
+            justify-content:center;
+            /* align-content:center; */
+            align-items:center;
+        }
+        .container .item {
+            /* flex 공부(자식-정렬대상) */
+            flex:1; /* ->일정한 비율 들어감 */  /* = */ /* width:25%; */ /* ->바뀔때마다 수치 바꿔야함 */
+            /* 공통디자인 */
+            /* width:100px; */
+            height:100px;
+            line-height:100px;
+            text-align:center;
+            font-size:2rem;
+        }
+        .container .a {
+            background-color:aqua;
+            order:3;
+            flex:4;
+        }
+        .container .b {
+            background-color:lime;
+            order:2;
+            align-self:flex-start;
+        }
+        .container .c {
+            background-color:yellow;
+            order:1;
+            align-self:flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item a">
+            <div>
+                <p>a-1</p>
+                <p>a-2</p>
+            </div>
+        </div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item b">B</div>
+        <div class="item b">B</div>
+    </div>
+</body>
+</html>

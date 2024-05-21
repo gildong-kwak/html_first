@@ -1,151 +1,156 @@
-# Visual Studio code (VScode)
-* vs code 실행 시 가장 먼저 확인해야할 것!
-* 왼쪽 탐색기가 당일 작업폴더로 연결되어 있는지 확인하기!
-* (위) 안되있다면 -> 파일 -> 작업폴더닫기 후 -> 폴더열기 다시진행!
-# html 시작
-* git, gitHub 개념공부
-* `<태그>` 웹페이지에서 의미적인 정보를 가지는 대상
-## HTML5 버전선언
-* `<!doctype html>`
-## HTML 구조태그
-* html : 웹의 시작과 끝. 문서 자체 의미.
-* head : 웹 문서의 정보, 제목 포함
-* meta : 웹 문서의 정보 기록
-* title : 웹 문서의 제목 (브라우저 상단 표시)
-* body : 웹 문서 내용(실제 대부분의 서비스가 들어가는 본문)
-## 구조 태그 속성
-* `lang="ko"` html문서 언어 설정
-* `charest="utf-8"` 다국어 문자열 설정
-* `description` 사이트 요약 설명
-* `keywords` 사이트 검색 키워드 설정
-## 속성 문법
-* `<태그 속성="값" 속성="값"></태그>`
-* 태그와 속성 사이 공백
-* 속성과 속성 사이 공백(속성 개수 제하없음)
-* 속성은 시작태그에만 작성하기!
-## 구조태그의 `title` 작성방법
-* 메인페이지 -> 사이트명
-* 메인페이지 -> 사이트명 | 광고문구추가
-* 서브페이지 -> 페이지명 | 사이트명
-* ex) 책이름 - 저자명 | 서점명
-* ex) 판매아이템명 | 사이트명
-## h1~h6 제목태그(block tag)
-* h1~h3 태그는 meta keywords와 동일한 검색키워드로 활용된다.(대제목일수록 높음)
-* h4~h6 태그는 거의 사용하지 않는다.
-* h1 대제목은 사이트의 로고 및 서브 페이지 제목에서 주록 사용한다.
-* h 제목의 1~6레벨은 순서대로 작성해야 한다.
-## 단락 p(block tag)
-* 한 줄 또는 여러 줄 단락 묶을 때 사용하는 태그
-* 제목(h)태그 종류와는 형제 태그 관계로 사용해야 한다. 부모-자식(X)
-## 인라인태그 br, em, strong, del, s, sup, sub
-* `br` : 블록 내 줄바꿈 태그
-* `em` : 블록 내 강조 태그
-* `strong` : 블록 내 경고용 강조 태그 (위와 특징 동일)
-* `del` : 삭제 텍스트, 쇼핑몰의 할인 전 가격 등에 사용
-* `s` : 교체 텍스트, 쇼핑몰의 할인 전 가격 등에 사용 (del 자주사용)
-* `sup, sub` : 윗첨자(sup), 아래첨자(sub) 수학, 과학등의 기호에 사용
-## 인용문 처리 blockquote, q
-* `blockquote(block)` : 단락 자체가 인용문에 해당할 때 사용, p태그와 부모-자식 관계로 사용해선 안된다.
-* `q(inline)` : 단락(p) 내에서 일부가 인용문에 해당할 때 사용
-* 공통 속성 `cite="URL"` : `blockquote` , `q` 로 인용문 처리할 경우 출처 표시용도로 주소(URL)을 담아주는 속성.
-## 특수문자 태그
-* `&` : 시작 `;` : 종료
-* `&copy;` & 시작과 copyright의 copy ; 종료
-## 주소태그
-* `adress` : 웹사이트의 관련 연락처, 소개, 고객센터 정보 등을 담을 때 사용합니다.
-* 다른 블록을 자식 또는 자손으로 배치할 수 없습니다. footer 영역에 주로 사용합니다.
-## 수평선태그
-* `hr` : 사이트 각 영역을 구분할 때 사용합니다. 주석과 같이 태그 구조 이해에 주 용도로 사용합니다.
-* CSS에서는 표현하지 않고 숨기는 경우가 대부분입니다.
-## 컴퓨터 명령어 태그
-* `code` : inline 웹강의사이트에서 주로 사용하는 태그
-* 컴퓨터가 지원하는 다양한 명령어를 화면 표시할 경우
-## 링크 태크 a
-* block, inline 특징을 모두 가진다.
-* 절대경로와 상대경로를 href 속성에 작성한다.
-* 상대경로는 a태그 작성중인 파일 위치 기준 연결하고자 하는 목적지 파일이 같은 위치에 있는지, 하위 위치에 있는지, 상위 위치에 있는지에 따라 다르게 작성한다.
-* ./ 현재 위치에서 시작
-* ../ 상위 폴더로 나가기
-* `./doll.jpg` : 현재 위치에서 doll.jpg 파일 찾기
-* `../doll.jpg` : 상위 폴더에서 한단계 나가서 doll.jpg 파일 찾기
-* `../a/doll.jpg` : 상위폴더로 한단계 나가고 a 폴더로 들어가서 doll.jpg 파일 찾기
-* `./b/doll.jpg` :  현재위치에서 b 폴더로 들어가서 doll.jpg 파일 찾기
-## 바로가기링크란?
-* 태그가 가진 아이디명을 href 속성에 작성하여 바로가기 링크로 활용할 수 있습니다.
-* 바로가기 링크 글자를 클릭할 경우 위치로 이동합니다.
-* 단순 페이지 이동이 아닌 특정 위치로 스크롤 이동하는 바로가기 기능
-## 바로가기 링크 제작 순서 및 주의사항
-* <a> 링크 접근성 잘못된 예시 | <p>저희의 제품을 더 알아보시려면 <a href="/products">여기</a>를 클릭하세요.</p>
-* <a> 링크 접근성 올바른 예시 | <p>  저희의 <a href="/products">제품을 더 알아보세요</a>.</p>
-1. 이동 목적지에 가장 가까운 태그에 `id` 적용하기
-2. 링크 대상에 `#id` href 속성값에 담기
-* 주의사항 : #은 아이디 이동 링크에만 사용하기
-## 파비콘 적용 순서
-* 각 웹 사이트를 실행시켰을 때 탭 및 작업표시줄 등에 해당 웹을 구분할 수 있게 해주는 아이콘
-* 'head' 아래 'titlte' 전에 파비콘 태그 작성
-* <link rel="shortcut icon" href="파비콘.ico 경로" type="image/x-icon">
-  <link rel="icon" href="파비콘.ico 경로" type="image/x-icon">
-1. 파비콘 크기로 이미지 다운받거나 편집하기
-2. html에서 head 안에 link태그로 `favicon` href주소 연결하기
-## 이미지태그 `img`
-* 대체텍스트 alt 속성을 필수로 작성해야 합니다.
-* 이미지 사용 시 의미전달이 필요한 이미지와 아닌 이미지를 구분해서 사용해야 합니다.
-* <img src=”url” alt=””>
-## 이미지태그 `img` (inline)
-* <img src=”url” alt=””>
-## figure, figcaption 태그
-* 문서 안 사진을 감싸는 틀로서 활용하고 사진의 캡션을 정의할 수 있습니다.
-* <a href>태그를 <figure>태그 바로 위 또는 바로 아래에 사용 가능하다.
-## video 태그
-* 주소 뒤에 물음표로 시작해 원하는 태그 사용하기 ex) ?autoplay=1&mute=1&loop=1 (여기서 mute는 muted로 표기하지 않는다.)
-* autoplay : 동영상 자동재생 / muted : 소리끄기(음소거) / loop : 계속 재생(반복) / controls :  동영상 재생 바 / 1: trye 0 : falus
-* 동영상 다운 받아 사용시 이름 간략하게 영문 및 숫자 표기로 정정하여 사용한다.
-## class, id 많이 사용하는 키워드
-* wrapper, wrap, area 전체 묶는 영영
-* contents, container 중~소 묶는 영역
-* group, g 간단한 소그룹 영역
-* top, btm(bottom), left, right 레이아웃 방향을 의미하는 키워드
-* 예 : 의미있는단어_영역명
-* 예시 : product_wrapm, item_area, price_g, main_contents, top_btn
-## div, span 그룹태그
-### div
-* 인라인과 블록이 2개 이상 형제일 경우 묶어주는 그룹태그
-* 레이아웃 기준 1행에 2열 이상 배치일 경우
-* 특정 의미를 가진 행에 같은 디자인 요소가 배치된 경우
-### span
-* 인라인이 2개 이상 형제일 경우 묶는 그룹태그
-* 의미없는 디자인 요소 인라인 처리 필요 시 사용
-## html5 semantic tag
-### semantic tag란?
-* HTML5에서 생성된 의미있는(semantic) 태그 입니다.
-### header
-* 로고 및 내비게이션을 묶어주는 웹 사이트 레이아웃 태그입니다.
-* 제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.
-### nav
-* 로고 및 웹사이트 주요 내비게이션을 묶어주는 웹 사이트 레이아웃 태그입니다.
-* 다른 페이지로의 링크를 보여주는 구획을 나타냅니다. 자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
-### gnb, lnb, snb
-* (global navigation bar) : nav 묶이는 대상
-* (local navigation bar) : 서브메뉴
-* (side navigation bar) : 구석메뉴 / 사이드메뉴
-## ul, ol, li
-* 작성 유형에 따라 순서가 있는 목록과 순서가 없는 목록으로 유형이 나뉩니다.
-* `ol` : 2개 이상의 목록(li) 구조을 묶어주는 그룹태그(ol)입니다.
-* 목록(li)의 순서가 있을 경우 ol을 사용합니다.
-* 그룹(ol)은 반드시 목록(li)의 가장 근접한 부모로써 존재해야합니다.
-* `ul` : 2개 이상의 목록(li) 구조을 묶어주는 그룹태그(ul)입니다.
-* 목록(li)의 순서와 연관 없을 경우 ul을 사용합니다.
-* 그룹(ul)은 반드시 목록(li)의 가장 근접한 부모로써 존재해야합니다.
-## details, summary
-* "열림" 상태일 때만 내부 정보를 보여주는 정보 공개 위젯을 생성합니다.
-* 요약이나 레이블은 <summary> 요소를 통해 제공할 수 있습니다.
-## footer, mark, main, time
-* `footer` : 웹페이지 가장 하단에 위치합니다. 구획의 작성자, 저작권 정보, 관련 문서 등의 내용을 담습니다.
-* `mark` : 현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한 부분을 나타냅니다.
-* `main` : 문서 <body>의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
-* `time` : 시간의 특정 지점 또는 구간을 나타냅니다.
-## dl, dt, dd 정의형 목록태그
-* 제목과 내용 구조로 된 목록에 정의형 목록 태그를 사용합니다.
-* 정의형 목록은 dl, dt, dd 3가지 태그로 이루어져 있습니다.
-* dl은 정의형 제목과 내용을 묶는 그룹입니다.
-* dt는 제목, dd는 제목의 내용입니다.
+# CSS(Cascading Style Sheet)
+## CSS 작성 전 준비사항
+* html1 문서 준비(태그 작성 완료 상태)
+* html1, css 파일 별도 폴더 관리
+* 최상위 폴더 html 파일 배치
+* 하위 폴더명 css, styles 으로 css파일 배치
+* ex) index.html, index.css
+## CSS 외부스타일시트와 내부스타일시트
+* name.css 외부파일로 분리해서 html에 link로 연결하는 **외부 스타일시트**
+* html파일 내에서 head태그 안에 style태그로 구분해서 작성하는 **내부 스타일시트**
+* 외부스타일시트 장단점 :
+-장점 : 1개의 css 파일로 여러개의 html을 관리할 수 있다.
+-단점 : 파일명 또는 파일 위치를 정확히 관리하지 않으면 파일 관리가 어려울 수 있다. 
+* 내부스타일시트 장단점 :
+-장점 : html파일 내에 작성하여 태그와 한꺼번에 보기 편하다.
+-단점 : 2개이상의 html파일을 동시에 디자인관리하는것이 불가능하다.
+## CSS 선택자
+1. 태그선택자 : `<h1></h1>` -> `h1 {속성:값;}`
+2. 클래스선택자 : `<h1 class="a"></h1>` -> `.a {속성:값;}`
+3. 아이디선택자 : `<h1 id="b"></h1>` -> `#b {속성:값;}`
+4. 자손선택자 : `<h1><em><span></span></em></h1>` -> `h1 em span {속성:값;}`
+5. 자식선택자 : `<h1><em><em></em></em></h1>` -> `h1 > em {속성:값;}`
+## CSS 디자인하기
+* CSS 작성 전 HTML이 미리 디자인이 되어있으면 안된다.
+* HTML을 디자인 초기화하는 작업이 CSS 디자인 전 반드시 선행되어야 한다!!!
+* 초기화 CSS `reset.css` 공통파일(날짜나 프로젝트명 표기금지!)
+# CSS 글자 표현 속성
+## font-family
+* 로컬글꼴(설치글꼴제공) 또는 웹 글꼴(추천)을 연결 할 수 있다.
+* "메인대표글꼴", "후보글꼴" (후보제안없음)
+* 후보글꼴은 메인글꼴과 모양이 비슷한 글꼴로 연결해야 한다.
+* 폰트에서 공백이나 한글이 있을때는”” 필요 / 영어나 공백이 없으면 “”필요없음
+## font-size
+* 웹 글꼴 평균 16px
+* 사용 단위 px, %, em, rem
+* 절대값 : px | 상대값 : %, em, rem(권장)
+# 선택자 우선 순위
+* 아이디(3) > .클래스(2) > 태그(1)
+1. 다음 중 우선 순위가 가장 높고 낮은 선택자는?
+* `#box .a .b p {}` : 3+2+2+1=8
+* `#box #a .b p {}` : 3+3+2+1=9
+* `#wrap #box .a {}` : 3+3+2=8
+* `#wrap .a .b p {}` : 3+2+2+1=8
+2. 다음 중 우선 순위가 가장 높고 낮은 선택자는?
+* `#wrap .a .b p` : 3+2+2+1=8
+* `#wrap #box .a` : 3+3+2=8
+* `#wrap #box .a .b p` : 3+3+2+2+1=11
+* `#box .a .b ` : 3+2+2=7
+## color
+* 영문명 직접 입력 ex) 테스트용으로 주로 밝은색을 사용한다.
+* aqua, lime, yellow, coral, ...
+* 헥사코드 입력 최소값 0~ 최대값 F RGB 코드 기준
+* RGB 웹 색상 기준으로 색상을 섞을 수록 밝아진다.
+* #Hex #000000 == #000, #FF00CC => #F0C
+* RGBa(red, green, blue, alpha) *최대색상 255
+## box css
+### dispalay
+* `block, inline, inline-block`
+* 특정 태그가 화면에 어떻게 표시될지 지정하는 속성
+* `block` : 새로운 행, 크기, 여백 인식
+* `inline` : 내용만큼 크기 인식(그 외 크기인식불가능)
+* `inline-block` :  내용만크 크기인식(크기추가설정가능), 옆으로 정렬
+### box-sizing
+* `box-sizing:border-box`
+* 요소의 너비와 높이를 계산할 때 테두리, 여백(padding)까지 포함해서 계산하는 속성
+* 속성 미적용 시 : w100+h100+padding-top20 = 100x120
+* 속성 적용 시 : w100+h100+padding-top20 = 100x100
+### width, height
+* 요소의 너비와 높이
+* 절대값px, 상대값%, 화면 상대값 vw, vh
+* 상대값 처리는 0~100% 사이 값만 사용한다.
+## form 요소와 속성
+### `<form action="#" method=""></form>`
+* action : 폼 데이터를 제출할 서버 스크립트 지정
+* method : 폼 데이터를 제출하는 방법
+### `<input type="" name="">`
+* type : input 요소가 나타낼 입력 필드의 종류를 정합니다.
+* name : input 요소의 이름을 지정합니다. (데이터 구분)
+* readonly : 읽기전용으로 사용자가 수정 및 내용을 쓸수가 없다.
+* autofocus, autocomplete : 검색창 및 아이디창에서 사용하며 autofocus는 커서가 깜빡거림을 주고, autocomplete 아래로 검색했던 목록을 자동으로 보여주는 것
+* value : input 요소의 초기값을 지정합니다.
+* placeholder : 안내사항등을 입력하여 보여주고 사용자가 값을 넣으면 알아서 사라짐
+* value와 placeholder의 차이점 : 
+* maxlength : 크기 size와 글자 수 제한설정
+### `<textarea></textarea>`
+* rows,  cols : 입력칸의 사이즈를 나타낸다.
+* 사용용도 및 주의사항 : html에서 값을 주는 것보다 css에서 처리하는것이 더 좋다.
+### input의 입력양식과 선택양식
+* text, url 등의 사용자가 직접입력가능한 입력양식
+* radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
+* `name` : 입력양식(데이터구분용), 선택양식(데이터구분(개별데이터X, 그룹데이터구분용))
+* `value` : 입력양식(초기값), 선택양식(개별데이터구분용)
+## CSS Layout
+### float, flex
+* `float` : 형제 관계에 해당하는 block or inline tag 왼쪽, 오른쪽 정렬할 때 사용
+* 예 : ul-li*3개 정렬 `ul li {float:left;}`
+* `flex` : 정렬하고자 하는 아이템의 부모한테 flex를 먼저 설정한다.
+* 예 : ul-li*3개 정렬 `ul {display:flex;}`
+* flex 설정 시 **기본값** : 메인축(수평) 교차축(수직)
+* `display:flex` : 정렬대상의 부모 설정 속성값, 설정 시 해당 부모 기준 자식까지(자손X) flexible box layout으로 처리하겠다!
+### flex 적용하기
+* `flex-direction`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. container안의 item의 메인축 방향을 설정합니다.
+3. `row` : 왼쪽->오른쪽 수평축 (기본값)
+4. `row-reverse` : 오른쪽->왼쪽
+5. `column` : 위->아래 수직축 변경
+6. `column-reverse` : 아래->위
+* `flex-wrap`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. container 내부 items 줄바꿈처리를 설정합니다.
+3. `wrap` : 기본값(자동 줄바꿈) ex) 1 2 3
+4. `wrap-reverse` : 행 기준 역방향으로 자동 줄바꿈 처리
+5. `nowrap` : 줄바꿈하지 않음(한 줄 처리) 가변너비에 따라 자동으로 % 크기 변경
+* `flex-flow`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. flex-direction과 flex-wrap을 묶음으로 처리할 수 있습니다.
+3. `flex-direction` : column + flex-wrap:nowrap 일 경우(아래)
+4. `flex-flow` : column nowrap 이라고 작성 가능
+* `justify-content`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 메인축의 정렬방법을 설정합니다.
+3. `flex-start` : items의 시작점 container의 시작점으로 정렬
+4. `flex-end` : items의 시작점 container의 끝점으로 정렬
+5. `center` : items을 메인축 기준 container에서 가운데 정렬
+6. `space-between` : items을 container의 start, end 양끝 items을 배치하고 나머지는 고르게 정렬
+7. `space-around` : items을 container안에서 균등한 여백을 포함하여 정렬
+* `align-content`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 교차축의 아이템이 2줄 이상일 경우 정렬방법입니다.
+3. **flex-wrap:wrap 적용한 상태로 확인하세요.**
+4. `stretch` : 기본값(교차축 기준으로 아이템 늘리기)
+5. `flex-start` : container의 start지점 기준 item 정렬
+6. `flex-end` : container의 end 지점 기준 item 정렬
+7. `center` : container의 가운데 위치 기준 item 정렬
+8. `space-between` : container의 start, end 에 양쪽 끝 맞추고 나머지 item 균등하게 정렬
+9. `space-around` : container에서 모든 item 균등하게 정렬
+* `align-items`
+1. container에 적용하는 속성 (=부모한테 적용한다)
+2. 교차축의 아이템이 1줄 일 경우 정렬방법입니다.
+3. `stretch` : (기본값) 교차축 방향 시작지점에 맞춰서 정렬(start와 거의 차이 없음)
+4. `flex-start` : 교차축 기준 container의 시작지점에 맞춰서 정렬(왼쪽 / 위)
+5. `flex-end` : 교차축 기준 container의 종료지점에 맞춰서 정렬(오른쪽/아래)
+6. `center` : 교차축 기준 container의 가운데지점에 맞춰서 정렬(수직중앙, 수평중앙)
+7. `baseline` : 교차축 기준 container의 시작지점에 맞춰서 정렬(왼쪽 / 위)
+* `align-self`
+1. item에 적용하는 속성 (=자식한테 적용한다)
+2. container에 적용하는 align-items보다 우선순위가 높습니다.
+3. flex box의 교차축을 정렬합니다.
+4. `flex-start` : 교차축 기준 container의 start 시작 위치(top or left)
+5. `flex-end` : 교차축 기준 container의 end 종료 위치(bottom or right)
+6. `center` : 교차축 기준 container의 center 중심 위치(center, middle)
+7. `baseline` : 교차축 기준 container의 baseline 위치(내용 크기에 따라 다름(기본은 start동일)
+# Font-Awesome
+## font-awesome : HTML
+## font-awesome : CSS

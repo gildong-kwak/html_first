@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-awesome | css</title>
+    <!-- HTML&CSS 공통필수링크 : font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .icon_set {}
+        .icon_set li {}
+        .icon_set li:first-child {color: lime; font-size: 32px;}
+        .icon_set li:nth-child(1) i[class*=cart] {}
+        .icon_set li:nth-child(1) .fa-cart-shopping {}
+        /* css-font-awesome */
+        /* 1. font-awesome CDN link태그로 준비한다. (html(cdn link)과 동일) */
+        /* 2. awesome 전용의 font-family와 weight를 설정한다. */
+        /* 3. awesome 적용될 태그를 준비한다. */
+        /* 4. 준비한 3번 태그에 가상선택자(after of before)를 작성한다. */
+        /* 5. 가상선택자에 content속성을 입력새서 unicode를 삽입한다. */
+        .icon_set li .prev {}
+        .icon_set li .prev::before {content: '\f0a5'; color: lime;}
+        .icon_set li .next {}
+        .icon_set li .next::after {content: '\f0a4'; color: lime;}
+        .icon_set li #mypage {}
+        .icon_set li #mypage::after,
+        .icon_set li #mypage::before {content: '\e59d'; color: #eaa9c8;}
+        .icon_set li #like {}
+        .icon_set li #like::after,
+        .icon_set li #like::before {content: '\f004'; color: #b4cffe;}
+    </style>
+</head>
+<body>
+    <h1>Font-Awesome</h1>
+    <p>웹 사이트에서 많이 사용하는 아이콘을 모아놓은 툴킷</p>
+    <p>Font-Awesome HTML로 가져올땐 인라인구조로 가져온다.</p>
+    <ul class="icon_set">
+        <!-- HTML로 삽입하는 법 (i 채그 활용) -->
+        <li><i class="fa-solid fa-cart-shopping" style="color: #eaa9c8;"></i></li>
+        <li><i class="fa-solid fa-umbrella-beach fa-xl" style="color: #b4cffe;"></i></li>
+        <li><i class="fa-solid fa-ice-cream" style="color: #FFD43B;"></i></li>
+        <!-- CSS로 삽입하는 법 (Unicode 활용) -->
+        <li><a href="#" class="prev fa">이전으로</a></li>
+        <li><a href="#" class="next fa">다음으로</a></li>
+        <li><button type="button" id="mypage" class="fa">마이페이지</button></li>
+        <li><button type="button" id="like" class="fa">관심상품</button></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

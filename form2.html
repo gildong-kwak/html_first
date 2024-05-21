@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2 | 0423</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #testFrm .test1 ul li input[name^=user] {
+            width:200px;
+            margin-bottom:10px;
+        }
+        /* 동의 radio */
+        /* 선택양식선택자::checked {} */
+        /* HTML <img src="" alt="">" */
+        /* CSS {background-image:url()} */
+        #testFrm .test2 ul li input[name*=MailA] {display:none;}
+        #testFrm .test2 ul li input[name*=MailA]:checked + label {
+            background-color:aqua;
+            background-image:url(./imeges/checked.svg);
+        }
+        #testFrm .test2 ul li label[for*=MailA] {
+            background-color:yellow;
+            background-image:url(./imeges/unchecked.svg);
+            background-repeat:no-repeat;
+            /* 배경이미지의 기본값 : xy반복, 안쪽배경 */
+            padding-left:26px;
+            display:inline-block;
+        }
+        /* 남여연습 */
+        #testFrm .test2 ul li input[name*=userGen] {display:none;}
+        #testFrm .test2 ul li input[name*=userGen]:checked + label {
+            background-color:aqua;
+            background-image:url(./imeges/woman.svg);
+        }
+        #testFrm .test2 ul li label[name*=userGen] {
+            background-color:yellow;
+            background-image:url(./imeges/man.svg);
+            background-repeat:no-repeat;
+            padding-left:26px;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" id="testFrm">
+    <fieldset class="test1">
+        <legend class="skip">폼양식</legend>
+        <ul>
+            <li><input type="text" name="userName" size="30" value="1" readonly></li>
+            <!-- size는 css로 주는걸 추천 / readonly는 읽기전용 -->
+            <li><input type="text" name="userPhone" value="010" disabled></li>
+            <!-- disabled 비활성화 -->
+            <li><input type="search" name="userSearch" autofocus autocomplete="on"></li>
+            <!-- autofocus 자동커서(웹사이트 들어가면 자동으로 검색창에 깜빡거리는 커서기능) -->
+            <!-- autocomplete="on" 최근검색목록 자동으로 뜨는 기능도 html기능(검색창이나 아이디창에 사용) -->
+        </ul>
+    </fieldset>
+    <fieldset class="test2">
+        <legend class="skip">양식</legend>
+        <ul>
+            <li><textarea name="userReview" placeholder="리뷰는 100자 이상 작성해주세요" rows="5" cols="100"></textarea></li>
+            <!-- placeholder 내용을 치면 안내 내용이 알아서 사라짐 / rows="5" cols="100" 또한 css에서 처리하는게 더 좋다 -->
+            <li><textarea name="siteLaw" rows="5" cols="50" readonly>사이트 가입 약과 2024.04.23</textarea></li>
+            <!-- textarea는 사용자가 입력하는 칸으로 사용 -->
+            <li>
+                <!-- <label>
+                    <input type="radio" name="userMailAgree" value="userMailAgreeY">
+                    동의
+                </label> -->
+                <!-- label과 input이 부모자식관계 -->
+                <input type="radio" id="userMailAgreeY" name="userMailAgree" value="userMailAgreeY">
+                <label for="userMailAgreeY">동의</label>
+            </li>
+            <!-- radio는 입력이 아닌 선택을 위한 폼 -->
+            <li>
+                <input type="radio" id="userMailAgreeN" name="userMailAgree" value="userMailAgreeN">
+                <label for="userMailAgreeN">비동의</label>
+                <!-- input과 label이 형제관계이므로 선택이 되지 않으므로 id와 for를 사용한다. -->
+            </li>
+            <!-- radio는 name으로 그룹화를 만들어주고 value로 구분을 해준다.(=id, vlaue, for의 이름이 동일함) -->
+            <li>
+                <label>
+                    <input type="radio" name="userSex" value="userSexF">여성
+                </label>
+                <label>
+                    <input type="radio" name="userSex" value="userSexM">남성
+                </label>
+                <!-- label과 input이 부모자식관계일때 -->
+            </li>
+            <li>
+                <input type="radio" id="Fmail" name="gender" value="Fmail">
+                <label for="Fmail">여성</label>
+                <input type="radio" id="Mail" name="gender" value="Mail">
+                <label for="Mail">남성</label>
+                <!-- input과 label이 형제관계일때 -->
+            </li>
+            <li>
+                <input type="checkbox" name="hobby" value="movie" id="movie">
+                <label for="movie">영화보기</label>
+                <input type="checkbox" name="hobby" value="sports" id="sports">
+                <label for="sports">운동하기</label>
+                <!-- checkbox 다중선택가능 체크박스 -->
+            </li>
+            <li>
+                <input type="radio" id="userGenF" name="gender" value="userGenF">
+                <label for="userGenF">여</label>
+                <input type="radio" id="userGenM" name="gender" value="userGenM">
+                <label for="userGenM">남</label>
+            </li>
+        </ul>
+    </fieldset>
+    <!-- id, class 이름 선언법 -->
+    <!-- 
+        1. 공백 위치에 _(언더바) 사용법
+        ex) test_frm, button_right
+        2. 공백 대신 두번째 단어의 앞글자 대문자 처리 Carmel 표기법 
+        ex) testFrm, buttonRight
+        ->대신 카멜을 쓸지 언더바를 쓸지 통일성을 주기
+    -->
+    </form>
+</body>
+</html>
